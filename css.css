@@ -1,0 +1,99 @@
+/* Lab 5 class demo: a simple nostalgic visual style */
+body {
+    margin: 0;
+    background: #e9e1d4;
+    color: #353631;
+    font-family: Georgia, serif;
+}
+
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.eyebrow {
+    font: 12px Arial, sans-serif;
+    letter-spacing: 3px;
+    color: #777065;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: normal;
+    margin: 14px 0 0;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 20px;
+    margin: 4px 0 26px;
+}
+
+.photo-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #a3a49e;
+    border: 12px solid #f9f5ed;
+    box-shadow: 0 12px 30px #0002;
+    overflow: hidden;
+}
+
+.scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    transition: opacity 1.5s;
+}
+
+.second-scene { opacity: 0; }
+
+.photo-tag {
+    position: absolute;
+    bottom: 14px;
+    left: 22px;
+    padding: 8px 12px;
+    background: #292b2abb;
+    color: white;
+    font: 12px Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.scene-buttons { margin-top: 18px; }
+.scene-buttons p { margin: 0 0 6px; font: 13px Arial, sans-serif; color: #777065; }
+.scene-buttons button { background: #6d716b; padding: 10px 15px; }
+.scene-buttons button:hover { background: #4e625a; }
+
+.player { padding: 10px 0 8px; }
+
+#description { font-size: 18px; }
+
+button {
+    background: #354947;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    margin: 6px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font: 14px Arial, sans-serif;
+}
+
+button:hover { background: #5b756e; }
+
+#status, footer {
+    color: #777065;
+    font: 12px Arial, sans-serif;
+}
+
+footer { margin: 24px 0 38px; }
+
+@media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .photo-frame { border-width: 7px; }
+    .photo-tag { font-size: 9px; left: 8px; bottom: 3px; }
+}

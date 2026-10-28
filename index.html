@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanghai, 2012 | Class Demo</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p class="eyebrow">CCT360 · LAB 5 · CLASS PROGRESS</p>
+            <h1>Shanghai, 2012</h1>
+            <p class="subtitle">Echoes of Yangjing</p>
+        </header>
+
+        <section class="photo-frame">
+            <!-- Temporary illustrations. Replace these with final images. -->
+            <img id="morning" class="scene" src="images/morning.svg" alt="Illustrated view from a modern high-rise home in Shanghai">
+            <img id="street" class="scene second-scene" src="images/street.svg" alt="Illustrated Yangjing-inspired street with old and modern buildings">
+            <p class="photo-tag" id="sceneTitle">01 / THE SIXTEENTH FLOOR</p>
+        </section>
+
+        <div class="scene-buttons">
+            <p>Preview a scene:</p>
+            <button id="scene1Btn">Scene 1 · The Sixteenth Floor</button>
+            <button id="scene2Btn">Scene 2 · The Familiar Streets</button>
+        </div>
+
+        <section class="player">
+            <p id="description">A morning above the city. Press Play to begin.</p>
+
+            <!-- Class 7: HTML5 audio element -->
+            <audio id="cityAudio" src="audio/demo-city.mp3" preload="auto"></audio>
+
+            <div class="buttons">
+                <button id="playBtn">Play</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="restartBtn">Restart</button>
+            </div>
+            <p id="status">Ready · 26-second softer ambient demo</p>
+        </section>
+
+        <footer>Class demo only. The illustrations and softer soundscape are reconstructed placeholders, not historical Shanghai recordings.</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

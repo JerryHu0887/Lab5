@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shanghai, 2012: a 75-second interactive sound journey through an evolving city.">
+    <title>Shanghai, 2012 | Echoes of Yangjing</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body id="top">
+    <div class="page">
+        <!-- Main navigation and project title. -->
+        <header class="site-header">
+            <a href="#top" class="wordmark" aria-label="Return to the top">ECHOES <span>/</span> YANGJING</a>
+            <span class="header-center">A PERSONAL AUDIO JOURNAL</span>
+            <nav class="nav-links" aria-label="Page navigation">
+                <a href="#experience">Listen</a>
+                <a href="#credits">Sources</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Introduce the Shanghai sound journey. -->
+            <section class="intro" aria-labelledby="pageTitle">
+                <div class="intro-main">
+                    <p class="section-kicker"><span class="issue-dot" aria-hidden="true"></span> ISSUE NO. 01 <span class="kicker-space">/</span> PUDONG, SHANGHAI</p>
+                    <h1 id="pageTitle">Shanghai,<br><em>2012.</em></h1>
+                </div>
+                <div class="intro-side">
+                    <p class="intro-overline">A CITY REMEMBERED IN SOUND</p>
+                    <p class="intro-copy">Familiar streets, changing skylines, and the everyday sounds of a city between old and new.</p>
+                    <p class="intro-subtitle">Echoes of Yangjing</p>
+                    <a class="hero-link" href="#experience">Enter the soundscape <span aria-hidden="true">↗</span></a>
+                </div>
+            </section>
+
+            <div class="editorial-rule"><span>PHOTO ESSAY <span class="red-mark">•</span> SOUND JOURNEY</span><span>SHANGHAI, CIRCA 2012 <span class="rule-dash">/</span> 01:15</span></div>
+
+            <section class="experience" id="experience" aria-label="Interactive Shanghai soundscape">
+                <div class="experience-bar"><span>THE FOUR MEMORIES</span><span id="sceneNumber">01 <span>/ 04</span></span></div>
+
+                <!-- Photographs and captions change with the audio chapter. -->
+                <div class="visual-stage" id="visualStage">
+                    <div class="photo-frame">
+                        <div class="photo-layer active" id="photo1">
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai-Pudong-04-2012-gje.jpg?width=1600" alt="Pudong in Shanghai, photographed by Gerd Eichmann in November 2012">
+                        </div>
+                        <div class="photo-layer" id="photo2">
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai-Shikumen-08-Strassenlokal-2012-gje.jpg?width=1600" alt="Street-side café in a Shanghai shikumen district, photographed in November 2012">
+                        </div>
+                        <div class="photo-layer" id="photo3">
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai-Pudong-08-Neubau_Shanghai_Tower-2012-gje.jpg?width=1600" alt="Shanghai Tower under construction in 2012, photographed by Gerd Eichmann">
+                        </div>
+                        <div class="photo-layer" id="photo4">
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai-Bund_nachts-04-2012-gje.jpg?width=1600" alt="The Bund at night in Shanghai, photographed in November 2012">
+                        </div>
+                        <div class="photo-shade" aria-hidden="true"></div>
+                        <div class="photo-corner">SHANGHAI <span>·</span> NOVEMBER 2012</div>
+                        <p class="photo-error">Photograph unavailable. See the original in Sources below.</p>
+                    </div>
+
+                    <div class="scene-details">
+                        <div class="scene-details-top"><span>FIELD NOTES</span><span>2012 / SHANGHAI</span></div>
+                        <p class="scene-index" aria-hidden="true">0<span id="largeSceneNumber">1</span></p>
+                        <div class="stage-caption">
+                            <p class="scene-label" id="sceneLabel">MEMORY 01 · 00:00—00:19</p>
+                            <h2 id="sceneTitle">Above the city</h2>
+                            <p id="sceneSubtitle">The morning begins on the sixteenth floor.</p>
+                        </div>
+                        <div class="scene-details-footer"><span>AN INTERACTIVE MEMORY</span><span aria-hidden="true">↙</span></div>
+                    </div>
+                </div>
+
+                <!-- Audio controls and the playback progress bar. -->
+                <section class="audio-panel" aria-label="Soundscape playback controls">
+                    <audio id="cityAudio" preload="metadata" src="audio/shanghai-soundscape.mp3"></audio>
+                    <div class="audio-heading">
+                        <div class="audio-disc" aria-hidden="true"><span>◖</span></div>
+                        <div class="track-details"><p class="micro-label">75-SECOND SOUNDSCAPE</p><p class="track-name">Echoes of Yangjing</p></div>
+                        <div class="sound-bars" id="soundBars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                    </div>
+                    <div class="playback-section">
+                        <div class="playback-row">
+                            <div class="playback-buttons">
+                                <button type="button" class="play-button" id="playBtn" aria-label="Play soundscape"><span class="play-symbol">▶</span><span>Play</span></button>
+                                <button type="button" class="plain-button" id="pauseBtn">Ⅱ <span>Pause</span></button>
+                                <button type="button" class="plain-button" id="restartBtn">↺ <span>Restart</span></button>
+                            </div>
+                            <button type="button" class="plain-button sound-button" id="muteBtn" aria-label="Mute sound">♫ <span>Sound on</span></button>
+                        </div>
+                        <div class="timeline-row">
+                            <span id="currentTime">00:00</span>
+                            <label class="visually-hidden" for="timeSlider">Soundscape playback position</label>
+                            <input type="range" id="timeSlider" min="0" max="75" step="1" value="0" aria-label="Seek soundscape">
+                            <span id="totalTime">01:15</span>
+                        </div>
+                        <p class="audio-instruction" id="status" aria-live="polite">Press Play to begin your journey.</p>
+                    </div>
+                </section>
+
+                <!-- Chapter buttons jump to different moments in the recording. -->
+                <div class="chapters-header"><span>CHAPTER INDEX</span><span>SELECT TO EXPLORE A MOMENT</span></div>
+                <div class="chapters" id="chapters">
+                    <button type="button" class="chapter selected" id="chapter1" aria-current="true"><span class="chapter-index">01 <span>—</span> 00:00</span><strong>Above the city</strong><small>Morning above the streets</small><span class="chapter-icon" aria-hidden="true">↗</span></button>
+                    <button type="button" class="chapter" id="chapter2"><span class="chapter-index">02 <span>—</span> 00:19</span><strong>Streets in between</strong><small>Everyday street sounds</small><span class="chapter-icon" aria-hidden="true">↗</span></button>
+                    <button type="button" class="chapter" id="chapter3"><span class="chapter-index">03 <span>—</span> 00:38</span><strong>Moving forward</strong><small>Changing skyline</small><span class="chapter-icon" aria-hidden="true">↗</span></button>
+                    <button type="button" class="chapter" id="chapter4"><span class="chapter-index">04 <span>—</span> 00:58</span><strong>Lights after dark</strong><small>Night along the river</small><span class="chapter-icon" aria-hidden="true">↗</span></button>
+                </div>
+            </section>
+
+            <!-- Credit the original photographs and explain the sound source. -->
+            <section class="credits" id="credits" aria-labelledby="sourcesTitle">
+                <div class="credits-headline"><span>REFERENCE / 01</span><h2 id="sourcesTitle">Sources</h2></div>
+                <div class="credits-content">
+                    <p>2012 Shanghai photographs by <strong>Gerd Eichmann</strong>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Images are cropped for display.</p>
+                    <div class="credit-links">
+                        <a href="https://commons.wikimedia.org/wiki/File:Shanghai-Pudong-04-2012-gje.jpg" target="_blank" rel="noopener noreferrer">01 Pudong ↗</a>
+                        <a href="https://commons.wikimedia.org/wiki/File:Shanghai-Shikumen-08-Strassenlokal-2012-gje.jpg" target="_blank" rel="noopener noreferrer">02 Shikumen ↗</a>
+                        <a href="https://commons.wikimedia.org/wiki/File:Shanghai-Pudong-08-Neubau_Shanghai_Tower-2012-gje.jpg" target="_blank" rel="noopener noreferrer">03 Shanghai Tower ↗</a>
+                        <a href="https://commons.wikimedia.org/wiki/File:Shanghai-Bund_nachts-04-2012-gje.jpg" target="_blank" rel="noopener noreferrer">04 The Bund ↗</a>
+                    </div>
+                    <p class="audio-credit"><strong>Sound:</strong> Original reconstructed soundscape, not a historical field recording.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer"><span>SHANGHAI, 2012 <span class="footer-mark">·</span> ECHOES OF YANGJING</span><a href="#top">BACK TO TOP ↑</a><span>AN AUDIO JOURNAL</span></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
